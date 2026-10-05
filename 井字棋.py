@@ -14,7 +14,5 @@ if current_player == player1:
 else: 
     current_player = player1  
 
-
-
 print(board)
 
