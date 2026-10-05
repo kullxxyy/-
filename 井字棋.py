@@ -17,10 +17,17 @@ for turn in range(9):
     #現在のプレイヤーに位置を入力させる
     i = int(input(f"{current_player} row："))
     j = int(input(f"{current_player} column："))
-    
-    #現在のプレイヤーの駒をボードに配置する
-    board[i][j]=current_player
-    
+
+    while i < 0 or i > 2 or j < 0 or j > 2:
+        print("write inside 0～2")
+        i = int(input(f"{current_player} row："))
+        j = int(input(f"{current_player} column：")) 
+
+    while board[i][j] == "x" or board[i][j] == "o":
+        print("This position is already used.")
+        i = int(input(f"{current_player} row："))
+        j = int(input(f"{current_player} column："))
+        
     #現在の盤面を表示する
     print(board[0])
     print(board[1])
