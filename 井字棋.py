@@ -27,11 +27,12 @@ for turn in range(9):
         print("This position is already used.")
         i = int(input(f"{current_player} row："))
         j = int(input(f"{current_player} column："))
-        
+
     #現在の盤面を表示する
-    print(board[0])
-    print(board[1])
-    print(board[2])
+    print("   0 1 2")
+    print(f"0  {board[0][0]} {board[0][1]} {board[0][2]}")
+    print(f"1  {board[1][0]} {board[1][1]} {board[1][2]}")
+    print(f"2  {board[2][0]} {board[2][1]} {board[2][2]}")
     
     #勝敗を判定する
     #8種類の勝利の組み合わせ
