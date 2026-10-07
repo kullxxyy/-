@@ -22,9 +22,6 @@ for turn in range(9):
             print("Please enter a number.")
             continue
 
-        i = int(input(f"{current_player} row: "))
-        j = int(input(f"{current_player} column: "))
-
         if i < 0 or i > 2 or j < 0 or j > 2:
             print("Please enter a number between 0 and 2.")
             continue
@@ -75,9 +72,8 @@ for turn in range(9):
     else: 
         current_player = player1  
 
-
-
-
+else: 
+    print("Draw")
 
 
 
