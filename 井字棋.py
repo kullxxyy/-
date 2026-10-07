@@ -12,6 +12,12 @@ player2 = "o"
 #現在のプレイヤーを設定する
 current_player = player1
 
+# 最初の盤面を表示する
+print("   0 1 2")
+print(f"0  {board[0][0]} {board[0][1]} {board[0][2]}")
+print(f"1  {board[1][0]} {board[1][1]} {board[1][2]}")
+print(f"2  {board[2][0]} {board[2][1]} {board[2][2]}")
+
 #一歩進むごとに確認します
 for turn in range(9):
     while True:
