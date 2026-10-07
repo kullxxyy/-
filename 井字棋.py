@@ -13,7 +13,15 @@ player2 = "o"
 current_player = player1
 
 #一歩進むごとに確認します
-while True:
+for turn in range(9):
+    while True:
+        try:
+            i = int(input(f"{current_player} row: "))
+            j = int(input(f"{current_player} column: "))
+        except ValueError:
+            print("Please enter a number.")
+            continue
+
         i = int(input(f"{current_player} row: "))
         j = int(input(f"{current_player} column: "))
 
@@ -26,21 +34,8 @@ while True:
             continue
         
         break
-
-for turn in range(9):
-    #現在のプレイヤーに位置を入力させる
-    i = int(input(f"{current_player} row："))
-    j = int(input(f"{current_player} column："))
-
-    while i < 0 or i > 2 or j < 0 or j > 2:
-        print("write inside 0～2")
-        i = int(input(f"{current_player} row："))
-        j = int(input(f"{current_player} column：")) 
-
-    while board[i][j] == "x" or board[i][j] == "o":
-        print("This position is already used.")
-        i = int(input(f"{current_player} row："))
-        j = int(input(f"{current_player} column："))
+    
+    board[i][j] = current_player
 
     #現在の盤面を表示する
     print("   0 1 2")
