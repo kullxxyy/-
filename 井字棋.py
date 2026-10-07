@@ -1,8 +1,8 @@
 #九宮格（グリッド）のボードを定義する
 board =[
-    ["1", "2", "3"],
-    ["4", "5", "6"],
-    ["7", "8", "9"]
+    [".", ".", "."],
+    [".", ".", "."],
+    [".", ".", "."]
 ]
 
 #2人のプレイヤーを定義する
@@ -13,6 +13,20 @@ player2 = "o"
 current_player = player1
 
 #一歩進むごとに確認します
+while True:
+        i = int(input(f"{current_player} row: "))
+        j = int(input(f"{current_player} column: "))
+
+        if i < 0 or i > 2 or j < 0 or j > 2:
+            print("Please enter a number between 0 and 2.")
+            continue
+
+        if board[i][j] == "x" or board[i][j] == "o":
+            print("This position is already used.")
+            continue
+        
+        break
+
 for turn in range(9):
     #現在のプレイヤーに位置を入力させる
     i = int(input(f"{current_player} row："))
